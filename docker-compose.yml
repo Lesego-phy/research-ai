@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  research-ai:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Persist data (exports, vector db, uploads) even if container restarts
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true

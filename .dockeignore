@@ -1,0 +1,23 @@
+# Tells Docker what to ignore
+
+.git
+.gitignore
+.env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+.pytest_cache
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+data/
+*.log
+.vscode/
+.idea/
+.DS_Store
