@@ -1,3 +1,5 @@
+# This file, It is/was only used to test progress on the terminal/command prompt
+
 from langchain.tools import tool
 import requests
 from bs4 import BeautifulSoup
