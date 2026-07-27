@@ -1,6 +1,5 @@
 # BeautifulSoup Web Scraper Tool
 
-# src/tools/scrape.py
 import requests
 from bs4 import BeautifulSoup
 from typing import List
