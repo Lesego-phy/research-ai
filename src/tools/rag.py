@@ -1,5 +1,5 @@
 # Vector DB & RAG Tool (For uploaded docs)
-# src/tools/rag.py
+
 import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -11,7 +11,7 @@ from langchain.tools import tool
 VECTOR_DB_DIR = "data/vector_db"
 os.makedirs(VECTOR_DB_DIR, exist_ok=True)
 
-# Initialize local, free embeddings (no Azure required)
+# Initialize local, free embeddings (no Azure required, for now)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 # Initialize the Vector Store
