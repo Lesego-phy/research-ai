@@ -136,12 +136,12 @@ def research_node(state: dict) -> dict:
             list_tool = client.get_tools("filesystem")[1]  # list_files tool
             files = await list_tool.ainvoke({})
             
-            # Read relevant files (simplified - you could make this smarter)
+            # This should read relevant files (simplified - this will be made more smarter)
             mcp_context = ""
             if files and files != "[]":
                 read_tool = client.get_tools("filesystem")[0]  # read_file tool
-                # For now, just read the first file as an example
-                # In production, you'd search for relevant files
+                # For now, test this with your files
+                # For our project, this will search relevant files
                 file_list = json.loads(files)
                 if file_list:
                     content = await read_tool.ainvoke({"filename": file_list[0]})
